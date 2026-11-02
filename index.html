@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PrayerRug — 7 free days</title>
+<meta name="description" content="PrayerRug locks your apps at prayer time until you stand on your rug. Coming in December.">
+<meta property="og:title" content="Don’t let your phone come between you and your prayer.">
+<meta property="og:description" content="7 free days of PrayerRug. Coming in December.">
+<meta name="theme-color" content="#F8F4EF">
+<style>
+  @font-face { font-family: "Alegreya"; font-weight: 700; font-display: swap; src: url("fonts/Alegreya-Bold.woff2") format("woff2"); }
+  @font-face { font-family: "Alegreya Sans"; font-weight: 400; font-display: swap; src: url("fonts/AlegreyaSans-Regular.woff2") format("woff2"); }
+  @font-face { font-family: "Alegreya Sans"; font-weight: 500; font-display: swap; src: url("fonts/AlegreyaSans-Medium.woff2") format("woff2"); }
+  @font-face { font-family: "Alegreya Sans"; font-weight: 700; font-display: swap; src: url("fonts/AlegreyaSans-Bold.woff2") format("woff2"); }
+  @font-face { font-family: "Fraunces"; font-weight: 600; font-display: swap; src: url("fonts/Fraunces-SemiBold.woff2") format("woff2"); }
+  :root {
+    --paper: #F8F4EF; --ink: #2C221C; --sub: #5E5148; --muted: #8A7F75;
+    --accent: #B64F35; --cream: #FFF8F2; --line: #E9DCD2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body {
+    font-family: "Alegreya Sans", system-ui, -apple-system, sans-serif;
+    min-height: 100svh; display: flex; flex-direction: column; align-items: center;
+    padding: max(28px, env(safe-area-inset-top)) 20px max(22px, env(safe-area-inset-bottom));
+    -webkit-font-smoothing: antialiased;
+  }
+  main { width: 100%; max-width: 420px; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .brand { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+  .brand .tile { width: 36px; height: 36px; border-radius: 9px; background: var(--accent); display: grid; place-items: center; }
+  .brand span { font-family: "Alegreya", Georgia, serif; font-weight: 700; font-size: 22px; letter-spacing: .1px; }
+  .sun { margin-top: 34px; width: 92px; height: 60px; }
+  h1 { font-family: "Alegreya", Georgia, serif; font-weight: 700; font-size: clamp(28px, 8.4vw, 34px); line-height: 1.13; margin-top: 26px; max-width: 360px; }
+  .free { font-family: "Alegreya", Georgia, serif; font-weight: 700; font-size: 34px; margin-top: 36px; }
+  .free .num { font-family: "Fraunces", Georgia, serif; font-weight: 600; color: var(--accent); }
+  .lead { font-size: 15.5px; line-height: 1.4; color: var(--sub); margin-top: 6px; max-width: 330px; }
+  form { width: 100%; margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
+  input[type=email] {
+    width: 100%; height: 56px; border-radius: 28px; border: 1.5px solid var(--line); background: #fff;
+    padding: 0 24px; font: 400 17px "Alegreya Sans", system-ui, sans-serif; color: var(--ink); outline: none;
+  }
+  input[type=email]::placeholder { color: #A39A92; }
+  input[type=email]:focus { border-color: var(--accent); }
+  input.bad { border-color: var(--accent); }
+  button {
+    width: 100%; height: 58px; border-radius: 29px; border: 0; background: var(--accent); color: var(--cream);
+    font: 700 19px "Alegreya Sans", system-ui, sans-serif; cursor: pointer;
+    box-shadow: 0 8px 18px rgba(150, 70, 40, .25); transition: transform .12s ease;
+  }
+  button:active { transform: scale(.98); }
+  button:disabled { opacity: .7; }
+  .fine { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+  .fine a { color: var(--muted); }
+  .done { display: none; margin-top: 30px; }
+  .done h2 { font-family: "Alegreya", Georgia, serif; font-size: 28px; }
+  .done p { font-size: 16px; color: var(--sub); margin-top: 6px; line-height: 1.4; }
+  body.sent form, body.sent .fine.under-form { display: none; }
+  body.sent .done { display: block; }
+  footer { width: 100%; max-width: 360px; text-align: center; font-size: 13px; line-height: 1.45; color: var(--muted); margin-top: 40px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <div class="tile" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 30 30" fill="none" stroke="#FFF8F2" stroke-width="2.4" stroke-linecap="round">
+        <path d="M8.5 21a6.5 6.5 0 0 1 13 0"/><path d="M3 21h24"/><path d="M15 12V8.5"/><path d="M8.64 14.64L6.16 12.16"/><path d="M21.36 14.64l2.48-2.48"/>
+      </svg>
+    </div>
+    <span>PrayerRug</span>
+  </div>
+
+  <svg class="sun" viewBox="0 3 30 21" fill="none" stroke="#B64F35" stroke-width="1.9" stroke-linecap="round" aria-hidden="true">
+    <path d="M8.5 21a6.5 6.5 0 0 1 13 0"/><path d="M3 21h24"/><path d="M15 12V8.5"/><path d="M8.64 14.64L6.16 12.16"/><path d="M21.36 14.64l2.48-2.48"/>
+  </svg>
+
+  <h1>Don’t let your phone come between you and your prayer.</h1>
+
+  <div class="free"><span class="num">7</span> free days</div>
+  <p class="lead">Leave your email — we’ll send them to you on launch day.</p>
+
+  <form id="form" novalidate>
+    <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="your@email.com" aria-label="Email" required>
+    <button id="send" type="submit">Send me 7 free days</button>
+  </form>
+  <p class="fine under-form">Only launch news. Unsubscribe anytime. <a href="privacy.html">Privacy</a></p>
+
+  <div class="done" role="status">
+    <h2>You’re on the list.</h2>
+    <p>We’ll email your 7 free days on launch day.</p>
+  </div>
+</main>
+
+<footer>PrayerRug locks your apps at prayer time until you stand on your rug. Coming in December.</footer>
+
+<script>
+(function () {
+  // Адрес веб-приложения Google Apps Script (site/apps-script.gs) — после
+  // развёртывания вставить сюда. Пусто — страница работает, но не считает.
+  var ENDPOINT = "";
+
+  // Метка ролика: последний кусок адреса (…/01) или ?v=01. Так у каждого
+  // видео Максима своя ссылка, и видно, откуда пришли люди.
+  function source() {
+    var q = new URLSearchParams(location.search).get("v");
+    if (q) return clean(q);
+    var parts = location.pathname.split("/").filter(Boolean);
+    var last = parts[parts.length - 1] || "";
+    if (/\.html?$/.test(last) || last === "prayerrug" || last === "") return "direct";
+    return clean(last);
+  }
+  function clean(s) { return (s.match(/[A-Za-z0-9_-]{1,24}/) || ["direct"])[0].toLowerCase(); }
+
+  var src = source();
+
+  function send(payload) {
+    if (!ENDPOINT) return Promise.resolve();
+    payload.v = src;
+    payload.ts = new Date().toISOString();
+    // text/plain — без предварительного запроса, Apps Script его читает.
+    return fetch(ENDPOINT, {
+      method: "POST", mode: "no-cors", keepalive: true,
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    }).catch(function () {});
+  }
+
+  // Переход по ссылке. «first» — первый раз с этого телефона по этой ссылке:
+  // так видно и всех, кто открыл, и сколько из них разных людей.
+  var key = "pr_seen_" + src, first = true;
+  try { first = !localStorage.getItem(key); localStorage.setItem(key, "1"); } catch (e) {}
+  send({ t: "visit", first: first, lang: navigator.language || "", ref: document.referrer || "" });
+
+  var form = document.getElementById("form"), input = document.getElementById("email"), btn = document.getElementById("send");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = (input.value || "").trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { input.classList.add("bad"); input.focus(); return; }
+    input.classList.remove("bad");
+    btn.disabled = true;
+    send({ t: "email", email: email }).then(function () { document.body.classList.add("sent"); });
+  });
+})();
+</script>
+</body>
+</html>
