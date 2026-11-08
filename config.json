@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "confidenceThreshold": 0.62,
+  "windowSize": 10,
+  "matchesNeeded": 5,
+  "hintAfterSeconds": 7,
+  "blockMinutes": 60,
+  "trialDays": 7,
+  "alarmChainMinutes": 60,
+  "alarmRepeatMinutes": 1,
+  "alarmScanRugShiftMinutes": 3
+}
