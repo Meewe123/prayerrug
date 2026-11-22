@@ -1,0 +1,23 @@
+/* Общий стиль страниц privacy/ и support/: шрифты и цвета лендинга. */
+@font-face { font-family: "Alegreya"; font-weight: 700; font-display: swap; src: url("fonts/Alegreya-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 400; font-display: swap; src: url("fonts/AlegreyaSans-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 700; font-display: swap; src: url("fonts/AlegreyaSans-Bold.woff2") format("woff2"); }
+:root { --paper: #F8F4EF; --ink: #2C221C; --sub: #5E5148; --muted: #8A7F75; --accent: #B64F35; --line: #E9DCD2; }
+* { box-sizing: border-box; }
+html, body { background: var(--paper); color: var(--ink); margin: 0; }
+body {
+  font: 400 17px/1.55 "Alegreya Sans", system-ui, -apple-system, sans-serif;
+  padding: max(28px, env(safe-area-inset-top)) 20px max(40px, env(safe-area-inset-bottom));
+  -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
+}
+main { max-width: 600px; margin: 0 auto; }
+.brand { display: inline-block; font-family: "Alegreya", Georgia, serif; font-weight: 700; font-size: 20px; color: var(--accent); text-decoration: none; }
+h1 { font-family: "Alegreya", Georgia, serif; font-weight: 700; font-size: clamp(28px, 7.5vw, 36px); line-height: 1.15; margin: 22px 0 8px; }
+h2 { font-family: "Alegreya", Georgia, serif; font-weight: 700; font-size: 21px; line-height: 1.25; margin: 32px 0 8px; padding-top: 20px; border-top: 1px solid var(--line); }
+p, li { color: var(--sub); }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+strong { color: var(--ink); font-weight: 700; }
+.date { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+a { color: var(--accent); overflow-wrap: anywhere; }
